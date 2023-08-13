@@ -19,7 +19,7 @@ RCT_EXPORT_METHOD(detectVPN:(RCTPromiseResolveBlock)resolve
     BOOL isConnected = NO;
     
     for (id key in keys) {
-        if ([@"tap" isEqual: key] || [@"tun" isEqual: key] || [@"ppp" isEqual: key] || [@"ipsec" isEqual: key] || [@"ipsec0" isEqual: key] || [key containsString: @"utun"]) {
+        if ([@"tap" isEqual: key] || [@"tun" isEqual: key] || [@"ppp" isEqual: key] || [key containsString: @"ipsec"] || [key containsString: @"utun"]) {
             isConnected = YES;
         }
     }
